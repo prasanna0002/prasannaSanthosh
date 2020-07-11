@@ -29,3 +29,9 @@ jobs:
         name: myreact
         # A file, directory or wildcard pattern that describes what to upload
         path: build
+      
+          - uses: actions/download-artifact@master
+    - name: Build Docker container1
+      run: docker build -t prasanna002/prasannasanthosh .
+    - run: docker login -u prasanna002 -p Muthala@123P
+    - run: docker push prasanna002/prasannasanthosh
